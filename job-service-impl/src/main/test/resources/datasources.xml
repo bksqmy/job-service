@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- <bean id="dsReadCC" class="org.apache.tomcat.jdbc.pool.DataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${prop.jdbc.cc.read.url}" />
+		<property name="username" value="${prop.jdbc.cc.read.username}" />
+		<property name="password" value="${prop.jdbc.cc.read.password}" />
+		<property name="defaultAutoCommit" value="true" />
+		<property name="initialSize" value="5" />
+		<property name="minIdle" value="5" />
+		<property name="maxIdle" value="15" />
+		<property name="maxActive" value="200" />
+		<property name="maxWait" value="2000" />
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="/* ping */ select 1" />
+		<property name="validationInterval" value="30000" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+	</bean> -->
+	<bean id="dsWriteCC" class="org.apache.tomcat.jdbc.pool.DataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${prop.jdbc.cc.writer.url}" />
+		<property name="username" value="${prop.jdbc.cc.writer.username}" />
+		<property name="password" value="${prop.jdbc.cc.writer.password}" />
+		<property name="defaultAutoCommit" value="true" />
+		<property name="initialSize" value="5" />
+		<property name="minIdle" value="5" />
+		<property name="maxIdle" value="15" />
+		<property name="maxActive" value="200" />
+		<property name="maxWait" value="2000" />
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="/* ping */ select 1" />
+		<property name="validationInterval" value="30000" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+	</bean>
+
+   <!--  <bean id="dsReadEcshop" class="org.apache.tomcat.jdbc.pool.DataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="${prop.jdbc.ecshop.read.url}" />
+        <property name="username" value="${prop.jdbc.ecshop.read.username}" />
+        <property name="password" value="${prop.jdbc.ecshop.read.password}" />
+        <property name="defaultAutoCommit" value="true" />
+        <property name="initialSize" value="5" />
+        <property name="minIdle" value="5" />
+        <property name="maxIdle" value="15" />
+        <property name="maxActive" value="200" />
+        <property name="maxWait" value="2000" />
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="/* ping */ select 1" />
+        <property name="validationInterval" value="30000" />
+        <property name="testWhileIdle" value="true" />
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+    </bean> -->
+   <!--  <bean id="dsWriteEcshop" class="org.apache.tomcat.jdbc.pool.DataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="${prop.jdbc.ecshop.writer.url}" />
+        <property name="username" value="${prop.jdbc.ecshop.writer.username}" />
+        <property name="password" value="${prop.jdbc.ecshop.writer.password}" />
+        <property name="defaultAutoCommit" value="true" />
+        <property name="initialSize" value="5" />
+        <property name="minIdle" value="5" />
+        <property name="maxIdle" value="15" />
+        <property name="maxActive" value="200" />
+        <property name="maxWait" value="2000" />
+        <property name="testOnBorrow" value="true" />
+        <property name="validationQuery" value="/* ping */ select 1" />
+        <property name="validationInterval" value="30000" />
+        <property name="testWhileIdle" value="true" />
+        <property name="timeBetweenEvictionRunsMillis" value="60000" />
+        <property name="minEvictableIdleTimeMillis" value="300000" />
+    </bean> -->
+</beans>
