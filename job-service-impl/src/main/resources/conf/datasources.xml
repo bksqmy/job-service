@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="dsJob" class="org.apache.tomcat.jdbc.pool.DataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${prop.jdbc.job.url}" />
+		<property name="username" value="${prop.jdbc.job.username}" />
+		<property name="password" value="${prop.jdbc.job.password}" />
+		<property name="defaultAutoCommit" value="true" />
+		<property name="initialSize" value="5" />
+		<property name="minIdle" value="5" />
+		<property name="maxIdle" value="15" />
+		<property name="maxActive" value="200" />
+		<property name="maxWait" value="2000" />
+		<property name="testOnBorrow" value="true" />
+		<property name="validationQuery" value="/* ping */ select 1" />
+		<property name="validationInterval" value="30000" />
+		<property name="testWhileIdle" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="300000" />
+    </bean>
+</beans>

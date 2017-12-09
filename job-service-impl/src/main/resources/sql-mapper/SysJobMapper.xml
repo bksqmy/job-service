@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chngc.job.dao.SysJobDao">
+	<resultMap id="SysJobResult" type="com.chngc.job.entity.SysJob">
+		<result property="jobId" column="job_id" />
+		<result property="jobName" column="job_name" />
+		<result property="jobType" column="job_type" />
+		<result property="jobStatus" column="job_status" />
+		<result property="cfgData" column="cfg_data" typeHandler="com.chngc.job.dao.SysJobCfgDataTypeHandler" />
+		<result property="cron" column="cron" />
+		<result property="updateUser" column="update_user" />
+		<result property="updateTime" column="update_time" />
+	</resultMap>
+	<select id="find" parameterType="Integer" resultMap="SysJobResult">
+		select `job_id`,`job_name`,`job_type`,`job_status`,`cfg_data`,`cron`,`update_user`,`update_time`
+		from `sys_job`
+		<where>
+			<if test="status != null">and `job_status` = #{status}</if>
+			<if test="name !=null and !name.isEmpty()">and `job_name` like #{name}</if>
+		</where>
+		order by `job_name`
+	</select>
+
+    <update id="updateJobStatus">
+        update `sys_job` set job_status=#{job_status} WHERE `job_id` = #{job_id}
+    </update>
+
+</mapper>

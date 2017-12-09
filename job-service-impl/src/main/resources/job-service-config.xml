@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+
+    <!-- mybatis session工厂配置 START-->
+    <bean id="jobSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dsJob"/>
+        <property name="mapperLocations" value="classpath:sql-mapper/*.xml"/>
+    </bean>
+
+
+    <bean id="jobManager" class="com.chngc.job.JobManager" init-method="init">
+        <property name="repository" ref="jobRepository" />
+        <property name="registryProtocol" value="${prop.registry.protocol}" />
+        <property name="registryAddress" value="${prop.registry.address}" />
+    </bean>
+
+
+    <bean id="jobService" class="com.chngc.job.impl.JobServiceImpl" >
+        <property name="jobManager" ref="jobManager" />
+    </bean>
+
+    <bean id="jobRepository" class="com.chngc.job.JobRepository">
+        <property name="sysJobDao" ref="sysJobDao" />
+        <property name="sysJobLogDao" ref="sysJobLogDao" />
+    </bean>
+
+    <bean id="sysJobDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.chngc.job.dao.SysJobDao" />
+        <property name="sqlSessionFactory" ref="jobSqlSessionFactory" />
+    </bean>
+    <bean id="sysJobLogDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface" value="com.chngc.job.dao.SysJobLogDao" />
+        <property name="sqlSessionFactory" ref="jobSqlSessionFactory" />
+    </bean>
+
+
+</beans>

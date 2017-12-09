@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+
+            http://code.alibabatech.com/schema/dubbo
+            http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="${pom.dubbo.properties-file}" />
+    </bean>
+
+    <import resource="classpath:conf/datasources.xml" />
+    <import resource="classpath:job-service-config.xml" />
+
+    <dubbo:provider threadpool="cached" loadbalance="roundrobin" cluster="failfast" delay="-1" />
+    <dubbo:protocol name="dubbo" port="${prop.dubbo.protocol.port}" />
+    <dubbo:registry protocol="${prop.registry.protocol}" address="${prop.registry.address}" />
+
+    <!-- <dubbo:monitor protocol="registry" /> -->
+    <dubbo:service ref="jobService" interface="com.chngc.job.service.JobService" delay="-1" cluster="failfast" />
+
+</beans>
