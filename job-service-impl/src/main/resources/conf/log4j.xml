@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
-<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://jakarta.apache.org/log4j/ ">
     <appender name="console-log" class="org.apache.log4j.ConsoleAppender">
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%d{HH:mm:ss SSS\} %-5p] %m%n" />
+            <param name="ConversionPattern" value="[%d{HH:mm:ss SSS\} %-5p] %m%n"/>
         </layout>
     </appender>
     <appender name="file-log" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="file" value="${pom.log.dir}/${pom.log.file}" />
-        <param name="append" value="true" />
-        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <param name="file" value="${pom.log.dir}/${pom.log.file}"/>
+        <param name="append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
         <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="[%d{MM-dd HH:mm:ss SSS} %-5p] %m%n" />
+            <param name="ConversionPattern" value="[%d{MM-dd HH:mm:ss SSS} %-5p] %m%n"/>
         </layout>
     </appender>
 
@@ -21,8 +23,8 @@
     </logger>
 
     <logger name="com.chngc" additivity="false">
-        <level value="${pom.log.level}" />
-        <appender-ref ref="${pom.log.name}" />
+        <level value="${pom.log.level}"/>
+        <appender-ref ref="${pom.log.name}"/>
     </logger>
 
     <logger name="java.sql" additivity="false">
@@ -31,8 +33,8 @@
     </logger>
 
     <root>
-        <level value="info" />
-        <appender-ref ref="file-log" />
+        <level value="info"/>
+        <appender-ref ref="file-log"/>
     </root>
 
 </log4j:configuration>

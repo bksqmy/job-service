@@ -273,9 +273,9 @@
                 <pom.registry.protocol>zookeeper</pom.registry.protocol>
                 <pom.registry.address>127.0.0.1:2181</pom.registry.address>
 
-                <pom.jdbc.job.url>jdbc:mysql://192.168.170.188:3306/chngc_job?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
-                <pom.jdbc.job.username>dev</pom.jdbc.job.username>
-                <pom.jdbc.job.password>dev</pom.jdbc.job.password>
+                <pom.jdbc.job.url>jdbc:mysql://127.0.0.1:3306/chngc_report?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
+                <pom.jdbc.job.username>root</pom.jdbc.job.username>
+                <pom.jdbc.job.password>123456</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
                 <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
