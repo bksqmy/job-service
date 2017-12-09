@@ -21,13 +21,6 @@
             <artifactId>job-service-service</artifactId>
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
-
-       <!-- <dependency>
-            <groupId>com.chngc</groupId>
-            <artifactId>chngc-core</artifactId>
-            <version>1.0.3</version>
-        </dependency>-->
-
         <!-- srping -->
         <dependency>
             <groupId>org.springframework</groupId>
