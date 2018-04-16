@@ -10,7 +10,7 @@
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-                <value>classpath:jdbc.properties</value>
+                <value>classpath:testConf/jdbc.properties</value>
             </list>
         </property>
 
@@ -22,7 +22,7 @@
                     cluster="failfast" delay="-1"/>
 
 
-    <import resource="classpath:datasources.xml"/>
-    <import resource="classpath:cc-service-config.xml"/>
+    <import resource="classpath:testConf/datasources.xml"/>
+    <import resource="classpath:testConf/job-service-config.xml"/>
 
 </beans>
