@@ -247,7 +247,7 @@
                 <pom.registry.protocol>zookeeper</pom.registry.protocol>
                 <pom.registry.address>127.0.0.1:2181</pom.registry.address>
 
-                <pom.jdbc.job.url>jdbc:mysql://rm-2zemo4n0ka9xh5l3kbo.mysql.rds.aliyuncs.com:3306/acura-mirror-base?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
+                <pom.jdbc.job.url>jdbc:mysql://rm-2zemo4n0ka9xh5l3kbo.mysql.rds.aliyuncs.com:3306/job?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
                 <pom.jdbc.job.username>acura_rm</pom.jdbc.job.username>
                 <pom.jdbc.job.password>ACR##95^^mirr</pom.jdbc.job.password>
 
