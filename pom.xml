@@ -39,12 +39,12 @@
         <repository>
             <id>nexus-releases</id>
             <name>Internal Release Repository</name>
-            <url>http://172.19.1.180:12100/repository/releases/</url>
+            <url>http://139.129.211.154:8070/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>Internal Snapshot Repository</name>
-            <url>http://172.19.1.180:12100/repository/snapshots/</url>
+            <url>>http://139.129.211.154:8070/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
