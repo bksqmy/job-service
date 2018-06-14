@@ -182,7 +182,7 @@
                 <pom.jdbc.job.password>2Y9TUWNUHG</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
-                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
+                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m</pom.jvm.mem-opts>
 
                 <pom.log.log4j-xml>log4j.xml</pom.log.log4j-xml>
                 <pom.log.dir>/data/logs/tomcat/job-service</pom.log.dir>
@@ -205,7 +205,7 @@
                 <pom.jdbc.job.password>8u4jmEQnt8Ek</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
-                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
+                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m</pom.jvm.mem-opts>
 
                 <pom.log.log4j-xml>log4j.xml</pom.log.log4j-xml>
                 <pom.log.dir>/data/logs/tomcat/job-service</pom.log.dir>
@@ -229,7 +229,7 @@
                 <pom.jdbc.job.password>r4Ebrc2Qrh5x</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
-                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
+                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m</pom.jvm.mem-opts>
 
                 <pom.log.log4j-xml>log4j.xml</pom.log.log4j-xml>
                 <pom.log.dir>/data/logs/tomcat/job-service</pom.log.dir>
@@ -245,14 +245,14 @@
             <properties>
                 <pom.dubbo.protocol.port>20001</pom.dubbo.protocol.port>
                 <pom.registry.protocol>zookeeper</pom.registry.protocol>
-                <pom.registry.address>192.168.170.237:2181</pom.registry.address>
+                <pom.registry.address>127.0.0.1:2181</pom.registry.address>
 
-                <pom.jdbc.job.url>jdbc:mysql://192.168.170.235:3306/chngc_job?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
-                <pom.jdbc.job.username>root</pom.jdbc.job.username>
-                <pom.jdbc.job.password>123.com</pom.jdbc.job.password>
+                <pom.jdbc.job.url>jdbc:mysql://rm-2zemo4n0ka9xh5l3kbo.mysql.rds.aliyuncs.com:3306/job?characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull</pom.jdbc.job.url>
+                <pom.jdbc.job.username>acura_rm</pom.jdbc.job.username>
+                <pom.jdbc.job.password>ACR##95^^mirr</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
-                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
+                <pom.jvm.mem-opts>-Xms512m -Xmx2048m</pom.jvm.mem-opts>
 
                 <pom.log.log4j-xml>log4j.xml</pom.log.log4j-xml>
                 <pom.log.dir>/data/logs/tomcat/job-service</pom.log.dir>
@@ -278,7 +278,7 @@
                 <pom.jdbc.job.password>123456</pom.jdbc.job.password>
 
                 <pom.dubbo.properties-file>classpath:dubbo.properties</pom.dubbo.properties-file>
-                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m -XX:PermSize=512M -XX:MaxPermSize=512M</pom.jvm.mem-opts>
+                <pom.jvm.mem-opts>-Xms2048m -Xmx2048m</pom.jvm.mem-opts>
 
                 <pom.log.log4j-xml>log4j.xml</pom.log.log4j-xml>
                 <pom.log.dir>D:\\CHNGC-Workspace\\logs</pom.log.dir>
