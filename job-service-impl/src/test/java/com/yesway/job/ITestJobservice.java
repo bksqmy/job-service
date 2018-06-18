@@ -5,9 +5,10 @@ import com.chngc.job.entity.SysJob;
 import com.chngc.job.service.JobService;
 import com.yesway.test.*;
 
-public class ITestEsAfterSale extends TestBase{
+public class ITestJobservice extends TestBase{
 
 	private JobService jobService;
+
 	@Override
 	protected void init() {
 		jobService = context.getBean(JobService.class);
