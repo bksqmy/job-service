@@ -42,7 +42,9 @@ public class JobManager implements ApplicationContextAware {
         }
 
         try {
-            this.scheduleJob(this.repository.findSysJobDao(null, SysJob.STATUS_ENABLED));
+            //提取相关sql文件
+            List<SysJob> sysJobDao = this.repository.findSysJobDao(null, SysJob.STATUS_ENABLED);
+            this.scheduleJob(sysJobDao);
         } catch (Exception e) {
             log.error("Load job list error, no jobs scheduled!", e);
         }
@@ -99,6 +101,7 @@ public class JobManager implements ApplicationContextAware {
 
 
     private void scheduleJob(SysJob job) throws Exception {
+
         if (job == null)
             return;
 
